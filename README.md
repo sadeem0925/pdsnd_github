@@ -2,10 +2,10 @@
 December 11, 2020
 
 ### Project Title
-Replace the Project Title
+BikeShare
 
 ### Description
-Describe what your project is about and what it does
+This Python project retrieves information from a set of data files for a bike rental store. This information is displayed to the user.
 
 ### Files used
 Include the files used
