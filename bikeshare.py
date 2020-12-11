@@ -153,6 +153,9 @@ def user_stats(df, city):
     customer_counts = (df.loc[df['User Type'] == 'Customer']).count()[0]
     print("The number of users that are customers is: " + customer_counts)
 
+    if city == 'washington':
+        print("Information regarding user genders and birth years is not available for Washington")
+
     if city != 'washington':
         # TO DO: Display counts of gender
         female_count = (df.loc[df['Gender'] == 'Female']).count()[0]
