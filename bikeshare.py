@@ -177,6 +177,7 @@ def user_stats(df, city):
     print('-'*40)
 
 def display_data(df):
+    """Displays an option for the user to view more data or exit"""
     response = input("Would you like to view 5 rows of raw data? (yes/no)")
     x = 0
     while(response == 'yes'):
