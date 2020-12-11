@@ -8,7 +8,9 @@ BikeShare
 This Python project retrieves information from a set of data files for a bike rental store. This information is displayed to the user.
 
 ### Files used
-Include the files used
+chicago.csv
+washington.csv
+new_york_city.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+https://github.com/udacity/pdsnd_github
