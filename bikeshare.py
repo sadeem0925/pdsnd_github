@@ -81,15 +81,15 @@ def time_stats(df):
 
     # TO DO: display the most common month
     popular_month = df['month'].mode()[0]
-    print("The most common month is: {0}".format(popular_month))
-
+    #print("The most common month is: {0}".format(popular_month))
+    print("The most common month is: " + popular_month);
     # TO DO: display the most common day of week
     popular_day = df['day'].mode()[0]
-    print("The most common day is: {0}".format(popular_day))
+    print("The most common day is: " + popular_day);
 
     # TO DO: display the most common start hour
     popular_hour = df['hour'].mode()[0]
-    print("The most common start hour is: {0}".format(popular_hour))
+    print("The most common start hour is: " + popular_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -103,18 +103,18 @@ def station_stats(df):
 
     # TO DO: display most commonly used start station
     common_st = df['Start Station'].mode()[0]
-    print("The most commonly used Start Station is {0}".format(common_st))
+    print("The most commonly used Start Station is: " + common_st)
 
 
     # TO DO: display most commonly used end station
     common_end = df['End Station'].mode()[0]
-    print("The most commonly used End Station is {0}".format(common_end))
+    print("The most commonly used End Station is: " + common_end)
 
 
     # TO DO: display most frequent combination of start station and end station trip
 
     common_combo = (df['Start Station'] + df['End Station']).mode()[0]
-    print("The most commonly used combination of Start and End Stations is {0}".format(common_combo))
+    print("The most commonly used combination of Start and End Stations is: " + common_combo)
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -129,11 +129,11 @@ def trip_duration_stats(df):
 
     # TO DO: display total travel time
     total_travel_time = (df['Trip Duration']).sum()
-    print("The total travel time is {0}".format(total_travel_time))
+    print("The total travel time is: " + total_travel_time)
 
     # TO DO: display mean travel time
     avg_travel_time = (df['Trip Duration']).mean()
-    print("The average/mean travel time is {0}".format(avg_travel_time))
+    print("The average/mean travel time is: " + avg_travel_time)
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -148,29 +148,29 @@ def user_stats(df, city):
 
     # TO DO: Display counts of user types
     sub_counts = (df.loc[df['User Type'] == 'Subscriber']).count()[0]
-    print("The number of users that are subscribed is {0}".format(sub_counts))
+    print("The number of users that are subscribed is: " + sub_counts)
 
     cust_counts = (df.loc[df['User Type'] == 'Customer']).count()[0]
-    print("The number of users that are customers is {0}".format(cust_counts))
+    print("The number of users that are customers is: " + cust_counts)
 
     if city != 'washington':
         # TO DO: Display counts of gender
         female_count = (df.loc[df['Gender'] == 'Female']).count()[0]
-        print("The number of users that are female is {0}".format(female_count))
+        print("The number of users that are female is: " + female_count)
 
         male_count = (df.loc[df['Gender'] == 'Male']).count()[0]
-        print("The number of users that are male is {0}".format(male_count))
+        print("The number of users that are male is: " + male_count)
 
 
         # TO DO: Display earliest, most recent, and most common year of birth
         earliest_year = int((df['Birth Year']).min())
-        print("The earliest birth year is {0}".format(earliest_year))
+        print("The earliest birth year is: " + earliest_year)
 
         most_recent_year = int((df['Birth Year']).max())
-        print("The most recent birth year is {0}".format(most_recent_year))
+        print("The most recent birth year is: " + most_recent_year)
 
         most_common_year = int((df['Birth Year']).mode())
-        print("The most common birth year is {0}".format(most_common_year))
+        print("The most common birth year is: " + most_common_year)
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
